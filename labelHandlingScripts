@@ -1,0 +1,81 @@
+#------------------------------------------------------
+# Scripts to manipulate labels for dojot repositories
+# Cesar - 28/oct/2017
+#------------------------------------------------------
+
+
+USER=useruser
+PASS=passpass
+
+# list of dojot repositories
+REPO1=ejbca-rest
+REPO2=docs
+REPO3=history-ws
+REPO4=fiware-orion
+REPO5=docker-compose
+REPO6=pdp-ws
+REPO7=gui
+REPO8=pep-kong
+REPO9=dojot
+REPO10=auth
+REPO11=device-manager
+REPO12=mqtt-manager
+REPO13=mashup
+REPO14=app-samples
+REPO15=perseo-fe
+REPO16=iotagent-json
+REPO17=node-sensortag
+REPO18=mqtt-emulator
+REPO19=iotagent-node-lib
+
+#--------------------------------------------
+# Including a new label for all repositories
+#--------------------------------------------
+#LabelName=Type:POC
+#ColorNum=f9d0c4
+#I=1
+#REPO=REPO$I
+#while [ ${!REPO} ]
+#do
+#	curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/${!REPO}/labels" -d '{"name": "'$LabelName'", "color": "'$ColorNum'"}'
+#	((I++))
+#	REPO=REPO$I
+#done
+
+#----------------------------------------------------------------------------
+# Replacing, deleting and including labels for a repository (in this case, REPO1)
+# At the, the repository will have the project standard labels
+#----------------------------------------------------------------------------
+#curl --user "$USER:$PASS" --request  PATCH "https://api.github.com/repos/dojot/$REPO1/labels/bug" -d '{"name": "Type:Bug"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Type:Feature", "color": "fbca04"}'
+#curl --user "$USER:$PASS" --request  PATCH "https://api.github.com/repos/dojot/$REPO1/labels/enhancement" -d '{"name": "Type:Enhancement"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Type:Task", "color": "5319e7"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Type:POC", "color": "f9d0c4"}'
+#curl --user "$USER:$PASS" --request  PATCH "https://api.github.com/repos/dojot/$REPO1/labels/question" -d '{"name": "Type:Question"}'
+#curl --user "$USER:$PASS" --request  PATCH "https://api.github.com/repos/dojot/$REPO1/labels/duplicate" -d '{"name": "Type:Duplicate"}'
+#curl --user "$USER:$PASS" --request  PATCH "https://api.github.com/repos/dojot/$REPO1/labels/invalid" -d '{"name": "Type:Invalid"}'
+#curl --user "$USER:$PASS" --request  PATCH "https://api.github.com/repos/dojot/$REPO1/labels/to%20do" -d '{"name": "Status:To Do", "color": "ffffcc"}'
+#curl --user "$USER:$PASS" --request  PATCH "https://api.github.com/repos/dojot/$REPO1/labels/in%20progress" -d '{"name": "Status:In Progress", "color": "ffcccc"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Status:To Do", "color": "ffffcc"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Status:In Progress", "color": "ffcccc"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Status:Scheduled", "color": "0e8a16"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Status:Rejected", "color": "d93f0b"}'
+#curl --user "$USER:$PASS" --request  PATCH "https://api.github.com/repos/dojot/$REPO1/labels/wontfix" -d '{"name": "Status:Wont Fix"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Status:Accepted", "color": "c2e0c6"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Status:Confirmed", "color": "fef2c0"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Status:More Info Needed", "color": "fbca04"}'
+#curl --user "$USER:$PASS" --request  PATCH "https://api.github.com/repos/dojot/$REPO1/labels/retest" -d '{"name": "Needs:Tests"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Needs:Review", "color": "d4c5f9"}'
+#curl --user "$USER:$PASS" --request  PATCH "https://api.github.com/repos/dojot/$REPO1/labels/help%20wanted" -d '{"name": "Needs:Help"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Priority:Critical", "color": "ff0000"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Priority:High", "color": "ff33f0"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Priority:Medium", "color": "fbca00"}'
+#curl --user "$USER:$PASS" --request  POST "https://api.github.com/repos/dojot/$REPO1/labels" -d '{"name": "Priority:Low", "color": "bfd4f2"}'
+#curl --user "$USER:$PASS" --request  DELETE "https://api.github.com/repos/dojot/$REPO1/labels/suggestion"
+#curl --user "$USER:$PASS" --request  DELETE "https://api.github.com/repos/dojot/$REPO1/labels/good%20first%20issue"
+
+
+#-------------------------------------------------------------------------------------------
+# How to get all labels of a repository (in this example, for REPO1)
+#-------------------------------------------------------------------------------------------
+#curl --user "$USER:$PASS" --request  GET "https://api.github.com/repos/dojot/$REPO1/labels"
